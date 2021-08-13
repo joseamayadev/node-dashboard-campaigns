@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+
+    <!-- Contenedor para crear campaña de envios masivos -->
+    <div class="contenedorPopUp">
+        <form action="" class="formularioArchivo">
+            <input type="text" placeholder="Titulo" />
+            <input type="text" placeholder="Cliente" />
+            <input type="text" placeholder="Contenido" />
+        </form>
+
+        <div class="attachFile">
+            <p>Adjuntar Archivo</p>
+            <input type="file" />
+            <button class="btnFile">Procesar</button>
+        </div>
+    </div>
+    <!-- Fin del contenedor para adjuntar campañas de envios masivos -->
+
+    <!-- Icono de boligrafo - CTA para escribir campaña -->
+    <a class="pencil">
+        <img src="img/Icon awesome-pencil-alt.svg" alt="" />
+    </a>
+
+    <!-- Menus de navegación -->
+    <nav class="navegacion">
+        <div class="contenedorLogo">
+            <h2>Logo</h2>
+        </div>
+        <div class="contenedorDescripcion">
+            <h4>Mesa de trabajo</h4>
+            <div class="contenedorPerfil">
+                <img src="img/iconNotification.svg" alt="" />
+                <span></span>
+                <div class="perfil">
+                    <img src="img/perfil.png" alt="" />
+                    <div>
+                        <p class="nombre">Jose Amaya</p>
+                        <p class="rol">Desarrollador de Software</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Contenedor principal -->
+    <main class="dashboard">
+        <div class="sidebar">
+            <ul>
+                <li>SMS</li>
+                <li>Correo</li>
+                <li>Whatsapp</li>
+            </ul>
+        </div>
+        <div class="tableroPrincipal">
+            <div class="contenedorTop">
+                <div class="contenedorStatus">
+                    <div class="estado">
+                        <img src="img/iconStatus.svg" alt="" />
+                        <p>Estado Actual</p>
+                    </div>
+
+                    <div class="enviado">
+                        <p>Total Enviado</p>
+                        <button class="btn">30000</button>
+                    </div>
+
+                    <div class="disponible">
+                        <p>Total Disponible</p>
+                        <button class="btn">79900</button>
+                    </div>
+                </div>
+
+                <div class="contenedorAdicional1"></div>
+                <div class="contenedorAdicional2"></div>
+            </div>
+
+            <div class="estadoCamapanas">
+                <div class="contenedorEncabezados">
+                    <div>Titulo</div>
+                    <div>Descripcion</div>
+                    <div>Cantidad</div>
+                    <div>Fecha</div>
+                    <div>Estado</div>
+                    <div>Cliente</div>
+                    <div>7</div>
+                </div>
+
+                <div class="contenedorInformacion">
+                    <p>Doumento</p>
+                    <p>Camapaña Invierno</p>
+                    <p>2000</p>
+                    <p>11/11/2021</p>
+                    <p>En proceso</p>
+                    <p>JoseAmaya SA</p>
+                    <div class="controles">
+                        <button class="play"></button>
+                        <button class="pause"></button>
+                        <button class="stop"></button>
+                    </div>
+                </div>
+                <div class="contenedorInformacion">
+                    <p>Doumento</p>
+                    <p>Camapaña Invierno</p>
+                    <p>2000</p>
+                    <p>11/11/2021</p>
+                    <p>En proceso</p>
+                    <p>JoseAmaya SA</p>
+                    <div class="controles">
+                        <button class="play"></button>
+                        <button class="pause"></button>
+                        <button class="stop"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

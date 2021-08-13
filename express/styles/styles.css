@@ -1,0 +1,316 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: Poppins;
+    height: 100vh;
+}
+
+.navegacion {
+    background-color: #ff3131;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+.contenedorLogo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.contenedorLogo h2 {
+    color: white;
+}
+
+.navegacion .contenedorDescripcion {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+}
+
+.navegacion .contenedorDescripcion h4 {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.navegacion .contenedorDescripcion .contenedorPerfil {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.navegacion .contenedorDescripcion .contenedorPerfil img {
+    position: relative;
+}
+
+.contenedorPerfil span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 252, 67);
+    border-radius: 50%;
+    transform: translateX(7px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.contenedorPerfil img:hover~span {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgb(3, 3, 3);
+    border-radius: 50%;
+    transform: translateX(7px);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.perfil {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.perfil div .nombre {
+    font-size: 14px;
+    color: white;
+}
+
+.perfil .rol {
+    font-size: 12px;
+    font-weight: 400;
+    color: #fcb0b0;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 90vh;
+    background: #ffe1e1;
+}
+
+
+/* Sección del sidebar Left */
+
+.sidebar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    background: #ff3131;
+    border-top: 1px solid white;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 166px;
+    height: 50px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    font-size: 16px;
+    background: #ff5858;
+    transition: 0.3s ease;
+}
+
+.tableroPrincipal {
+    padding-top: 10px;
+    padding-left: 30px;
+    height: 100%;
+}
+
+.contenedorTop {
+    display: grid;
+    grid-template-columns: 40% 30% 20%;
+    grid-template-rows: 20vh;
+    grid-column-gap: 20px;
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 15px;
+}
+
+.contenedorStatus {
+    width: 433px;
+    height: 99px;
+    background: white;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
+    overflow: hidden;
+}
+
+.estado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.estado p {
+    font-size: 7px;
+    font-weight: 600;
+}
+
+.enviado,
+.disponible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 12px;
+    font-weight: 300;
+    color: #ff3131;
+}
+
+.btn {
+    width: 133px;
+    height: 30px;
+    border: none;
+    margin-top: 5px;
+    border-radius: 17px;
+    background: #ff3131;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+}
+
+.contenedorAdicional1 {
+    width: 245px;
+    height: 99px;
+    background: white;
+    border-radius: 30px;
+    margin-left: 40px;
+    justify-self: flex-start;
+}
+
+.contenedorAdicional2 {
+    width: 245px;
+    height: 99px;
+    background: white;
+    border-radius: 30px;
+    justify-self: flex-start;
+}
+
+
+/* Icon de escribir post */
+
+.pencil {
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    background-color: #ffe1e1;
+    left: 50px;
+    bottom: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.estadoCamapanas {
+    background: #fbf6f6;
+    width: 100%;
+    height: 30vh;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.contenedorEncabezados,
+.contenedorInformacion {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-self: center;
+    color: #fb6161;
+}
+
+.contenedorEncabezados div {
+    font-size: 12px;
+    align-self: center;
+    justify-self: center;
+    color: #fb6161;
+    margin-bottom: 20px;
+}
+
+.contenedorInformacion {
+    background: white;
+    border-radius: 10px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.contenedorInformacion p,
+div {
+    font-size: 11px;
+    align-self: center;
+    justify-self: center;
+    color: #818080;
+}
+
+.controles {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play,
+.pause,
+.stop {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: none;
+    margin: 7px;
+    background-color: #fb6161;
+}
+
+.contenedorPopUp {
+    position: fixed;
+    width: 70vw;
+    height: 70vh;
+    left: 10vw;
+    top: 20vh;
+    background: #fbf6f6;
+    display: none;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.205);
+}
+
+.formularioArchivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.formularioArchivo input {
+    width: 80%;
+    height: 40px;
+    border: none;
+    margin: 20px;
+    padding: 10px;
+}
