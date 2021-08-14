@@ -1,20 +1,30 @@
-const http = require('http');
+// Modulos y variables de node
 const express = require('express');
 const path = require('path');
 const app = express();
 app.use(express.json());
-app.use(express.static("express"));
-// URL predeterminada para el sitio web 
+const port = 3000;
+
+
+// Ruta del css estatico
+app.use(express.static("views"));
+
+
+// URL predeterminada para el sitio web con la vista hacia archivo HTML que
+// que contiene el dashboard
 app.use('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/express/index.html'));
-    // __ dirname: se resolverá en su carpeta del proyecto. 
+    res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
+
+// En caso de querer entrar a través de inicio y usar el root como middleware
 app.use('/inicio', function(req, res) {
-    res.sendFile(path.join(__dirname + '/express/index.html'));
-    // __ dirname: se resolverá en su carpeta del proyecto. 
+    res.sendFile(path.join(__dirname + '/views/index.html'));
 });
-const server = http.createServer(app);
-const port = 3000;
-server.listen(port);
-console.debug('Servidor escuchando en port' + port);
+
+
+// En desarrollo usar 300 en producción usar el puerto de preferencia
+// Recomendable usarlo como varible de entorno o en el servicio de hosting
+app.listen(port, () => {
+    console.log('Servidor escuchando en el puerto 3000!');
+});

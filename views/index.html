@@ -1,31 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inicio de sesion</title>
+    <meta name="keywords" content="Dashboard, envios masivos, marketing, simpe data dashboard">
+    <meta name="description" content="Dashboard para presentar información de campañas creadas a través de una aplicación que se basaba en el envio masivos de correos a través de twilio, unicamente se cargaba un csv y este era utlizado por el cliente">
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="image_src" href="https://res.cloudinary.com/www-ismyt-com/image/upload/v1628826735/IMAGENES/GITHUB/preview-jordan-cards-animation_rgmjdl.png" />
+
 </head>
 
 <body>
 
-    <!-- Contenedor para crear campaña de envios masivos -->
-    <div class="contenedorPopUp">
-        <form action="" class="formularioArchivo">
-            <input type="text" placeholder="Titulo" />
-            <input type="text" placeholder="Cliente" />
-            <input type="text" placeholder="Contenido" />
-        </form>
 
-        <div class="attachFile">
-            <p>Adjuntar Archivo</p>
-            <input type="file" />
-            <button class="btnFile">Procesar</button>
-        </div>
-    </div>
-    <!-- Fin del contenedor para adjuntar campañas de envios masivos -->
 
     <!-- Icono de boligrafo - CTA para escribir campaña -->
     <a class="pencil">
@@ -126,6 +116,28 @@
             </div>
         </div>
     </main>
+
+    <!-- Contenedor para crear campaña de envios masivos -->
+    <div class="contenedorPopUp">
+        <form action="" class="formularioArchivo">
+            <h3>Postear Campaña</h3>
+            <input type="text" placeholder="Titulo" />
+            <input type="text" placeholder="Cliente" />
+            <input type="text" placeholder="Contenido" />
+        </form>
+
+        <div class="attachFile">
+            <p>Adjuntar Archivo</p>
+            <input type="file" />
+            <button class="btnFile">Procesar</button>
+
+        </div>
+
+        <button id="closeOpen"></button>
+    </div>
+    <!-- Fin del contenedor para adjuntar campañas de envios masivos -->
+
+    <script src="js/app.js"></script>
 </body>
 
 </html>

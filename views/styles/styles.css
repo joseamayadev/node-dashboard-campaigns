@@ -1,3 +1,11 @@
+:root {
+    --main-bg-color: #0E0E0E;
+    --secondary-bg-color: #161616;
+    --blue-color: #4E54FF;
+    --yellow-color: #F4E236;
+    --bg-cards: rgba(255, 255, 255, 0.103);
+}
+
 * {
     margin: 0px;
     padding: 0px;
@@ -5,13 +13,14 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--main-bg-color);
     font-family: Poppins;
     height: 100vh;
+    overflow: hidden;
 }
 
 .navegacion {
-    background-color: #ff3131;
+    background-color: var(--main-bg-color);
     height: 12vh;
     display: grid;
     grid-template-columns: 30% 70%;
@@ -26,7 +35,7 @@ body {
 }
 
 .contenedorLogo h2 {
-    color: white;
+    color: var(--blue-color);
 }
 
 .navegacion .contenedorDescripcion {
@@ -37,7 +46,7 @@ body {
 }
 
 .navegacion .contenedorDescripcion h4 {
-    color: white;
+    color: var(--blue-color);
     font-weight: 500;
     font-size: 16px;
 }
@@ -50,28 +59,27 @@ body {
 
 .navegacion .contenedorDescripcion .contenedorPerfil img {
     position: relative;
+    margin-right: 20px;
 }
 
 .contenedorPerfil span {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: rgb(255, 252, 67);
     border-radius: 50%;
-    transform: translateX(7px);
-    opacity: 0;
+    transform: translateY(10px);
     transition: 0.5s;
+    background-color: var(--yellow-color);
 }
 
 .contenedorPerfil img:hover~span {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: rgb(3, 3, 3);
     border-radius: 50%;
     transform: translateX(7px);
+    background: var(--blue-color);
     transition: 0.5s;
-    opacity: 1;
 }
 
 .perfil {
@@ -82,20 +90,20 @@ body {
 
 .perfil div .nombre {
     font-size: 14px;
-    color: white;
+    color: var(--yellow-color);
 }
 
 .perfil .rol {
     font-size: 12px;
     font-weight: 400;
-    color: #fcb0b0;
+    color: var(--blue-color);
 }
 
 .dashboard {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 90vh;
-    background: #ffe1e1;
+    background: var(--secondary-bg-color);
 }
 
 
@@ -107,7 +115,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 40px;
-    background: #ff3131;
+    background-color: var(--main-bg-color);
     border-top: 1px solid white;
 }
 
@@ -126,11 +134,12 @@ body {
     text-align: center;
     border-radius: 20px;
     transition: 0.3s ease;
+    background-color: #f4e1360e;
 }
 
 .sidebar ul li:hover {
     font-size: 16px;
-    background: #ff5858;
+    background: var(--blue-color);
     transition: 0.3s ease;
 }
 
@@ -153,7 +162,7 @@ body {
 .contenedorStatus {
     width: 433px;
     height: 99px;
-    background: white;
+    background: var(--bg-cards);
     border-radius: 30px;
     display: grid;
     grid-template-columns: 20% 40% 40%;
@@ -170,6 +179,7 @@ body {
 .estado p {
     font-size: 7px;
     font-weight: 600;
+    color: var(--blue-color);
 }
 
 .enviado,
@@ -180,7 +190,7 @@ body {
     flex-direction: column;
     font-size: 12px;
     font-weight: 300;
-    color: #ff3131;
+    color: var(--yellow-color);
 }
 
 .btn {
@@ -189,7 +199,7 @@ body {
     border: none;
     margin-top: 5px;
     border-radius: 17px;
-    background: #ff3131;
+    background: var(--blue-color);
     font-size: 12px;
     font-weight: 700;
     color: white;
@@ -198,7 +208,7 @@ body {
 .contenedorAdicional1 {
     width: 245px;
     height: 99px;
-    background: white;
+    background: var(--bg-cards);
     border-radius: 30px;
     margin-left: 40px;
     justify-self: flex-start;
@@ -207,7 +217,7 @@ body {
 .contenedorAdicional2 {
     width: 245px;
     height: 99px;
-    background: white;
+    background: var(--bg-cards);
     border-radius: 30px;
     justify-self: flex-start;
 }
@@ -219,7 +229,7 @@ body {
     position: fixed;
     width: 75px;
     height: 75px;
-    background-color: #ffe1e1;
+    background-color: var(--yellow-color);
     left: 50px;
     bottom: 30px;
     border-radius: 50%;
@@ -230,7 +240,7 @@ body {
 }
 
 .estadoCamapanas {
-    background: #fbf6f6;
+    background: var(--bg-cards);
     width: 100%;
     height: 30vh;
     padding: 20px;
@@ -242,19 +252,18 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     align-self: center;
-    color: #fb6161;
 }
 
 .contenedorEncabezados div {
     font-size: 12px;
     align-self: center;
     justify-self: center;
-    color: #fb6161;
+    color: white;
     margin-bottom: 20px;
 }
 
 .contenedorInformacion {
-    background: white;
+    background: #ffffff2c;
     border-radius: 10px;
     height: 30px;
     margin-top: 5px;
@@ -265,7 +274,7 @@ div {
     font-size: 11px;
     align-self: center;
     justify-self: center;
-    color: #818080;
+    color: var(--yellow-color);
 }
 
 .controles {
@@ -283,7 +292,7 @@ div {
     border-radius: 50%;
     border: none;
     margin: 7px;
-    background-color: #fb6161;
+    background-color: var(--blue-color);
 }
 
 .contenedorPopUp {
@@ -292,12 +301,13 @@ div {
     height: 70vh;
     left: 10vw;
     top: 20vh;
-    background: #fbf6f6;
-    display: none;
+    background: #4e54ffa8;
+    display: grid;
     grid-template-columns: 40% 60%;
     grid-template-rows: 100%;
     border-radius: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.205);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.376);
+    backdrop-filter: blur(4px);
 }
 
 .formularioArchivo {
@@ -307,10 +317,102 @@ div {
     flex-direction: column;
 }
 
+.formularioArchivo h3 {
+    font-size: 2rem;
+}
+
 .formularioArchivo input {
     width: 80%;
     height: 40px;
     border: none;
+    border-bottom: 3px solid var(--yellow-color);
     margin: 20px;
     padding: 10px;
+    background: transparent;
+    outline: none;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+.formularioArchivo input::placeholder {
+    color: rgba(255, 255, 255, 0.575);
+}
+
+.attachFile {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+}
+
+.attachFile input[type="file"] {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0px;
+}
+
+.attachFile button {
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    padding: 1rem 0px;
+    border-radius: .4rem;
+    outline: none;
+    border: none;
+    background-color: var(--yellow-color);
+    color: var(--blue-color);
+}
+
+#closeOpen {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 50%;
+    border: none;
+}
+
+#closeOpen::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--yellow-color);
+    transform: rotate(45deg);
+    transition: .4s;
+}
+
+#closeOpen:hover::after {
+    transform: rotate(0deg);
+    transition: .4s;
+}
+
+#closeOpen::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background-color: var(--yellow-color);
+    transform: rotate(-45deg);
+    transition: .4s;
+}
+
+#closeOpen:hover::before {
+    transform: rotate(0deg);
+    transition: .4s;
 }
